@@ -9,16 +9,19 @@ int main()
 	printf("Insertion Sorting of Arrays\n");
 	array = insertion_sort_array(arr, size);
 	print_array(array, size);
+	printf("\n")
 
 	int arr_1[] = {4, 12, 7, 3, 20, 10, 18, 6, 1, 15};
 	array = insertion_sort_array(arr_1, size);
 	print_array(array, size);
+	printf("\n")
 
 	int arr_2[] = {4, 12, 7, 3, 20, 10, 18, 6, 1, 15,
 	15, 12, 8, 6, 11, 13, 17, 9, 19, 1};
 	size = 20;
 	array = insertion_sort_array(arr_2, size);
 	print_array(array, size);
+	printf("\n")
 
 	int arr_3[] = {34, 123, 41, 27, 48, 72, 26, 99, 80, 70, 173, 137, 13,
 		       83, 73, 177, 133, 21, 87, 23, 140, 32, 190, 69, 110,
@@ -32,6 +35,21 @@ int main()
 	size = 100;
 	array = insertion_sort_array(arr_3, size);
 	print_array(array, size);
+
+
+
+	printf("\n\nInsertion sort for Linked list\n");
+	listint_t *head;
+	head = NULL;
+	add_dnodeint_end(&head, 14);
+	add_dnodeint_end(&head, 13);
+	add_dnodeint_end(&head, 10);
+	add_dnodeint_end(&head, 3);
+	add_dnodeint_end(&head, 12);
+	add_dnodeint_end(&head, 19);
+	add_dnodeint_end(&head, 1);
+	add_dnodeint_end(&head, 11);
+	print_list(head);
 
 	return (0);
 }

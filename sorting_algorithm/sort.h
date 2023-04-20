@@ -27,6 +27,28 @@ typedef struct listint_s
 int *insertion_sort_array(int *array, int size);
 
 /**
+ * insertion_sort_list - Sort by examinig the elements
+ * before it and shifting is as appropriate
+ * @list: unsorted linked list
+ * Return: pointer to head of linked list
+ */
+listint_t *insertion_sort_list(listint_t *list);
+
+/**
+ * add_dnodeint - Adds a new node at the end of a list
+ * @head: Head pointer
+ * @n: Integer data
+ * Return: the address of the new element, or NULL if it failed
+ */
+listint_t *add_dnodeint(listint_t **head, const int n);
+
+/**
+ * free_listint - Frees a listint_t list
+ * @head: Head pointer
+ */
+void free_listint(listint_t *head);
+
+/**
  * print_list - Prints a list of integers
  *
  * @list: The list to be printed
