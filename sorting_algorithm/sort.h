@@ -18,6 +18,15 @@ typedef struct listint_s
 } listint_t;
 
 /**
+ * insertion_sort_array - Sort by examinig the elements
+ * before it and shifting is as appropriate
+ * @array: The unsorted array
+ * @size: The size of the array
+ * Return: pointer to sorted array
+ */
+int *insertion_sort_array(int *array, int size);
+
+/**
  * print_list - Prints a list of integers
  *
  * @list: The list to be printed
