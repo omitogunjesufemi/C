@@ -27,12 +27,23 @@ typedef struct listint_s
 int *insertion_sort_array(int *array, int size);
 
 /**
- * insertion_sort_list - Sort by examinig the elements
- * before it and shifting is as appropriate
- * @list: unsorted linked list
- * Return: pointer to head of linked list
+ * insertion_sort_list - Sorts a doubly linked list of integers in ascending
+ * order using the insertion sort algorithm
+ * @list: A pointer to a pointer to the first node of the list
+ *
+ * Return: A pointer to the first node of the sorted list
  */
-listint_t *insertion_sort_list(listint_t *list);
+listint_t *insertion_sort_list(listint_t **list);
+
+/**
+ * find_insert_pos - Finds the position where the current node should be
+ * inserted in the sorted list
+ * @head: A pointer to the first node of the list
+ * @node: The current node to be inserted in the list
+ *
+ * Return: A pointer to the node where the current node should be inserted
+ */
+listint_t *find_insert_pos(listint_t *head, listint_t *node);
 
 /**
  * add_dnodeint - Adds a new node at the end of a list

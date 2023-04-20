@@ -43,18 +43,26 @@ int main()
 
 	printf("\n\nInsertion sort for Linked list\n");
 	head = NULL;
-	add_dnodeint(&head, 11);
-	add_dnodeint(&head, 12);
-	add_dnodeint(&head, 15);
+	add_dnodeint(&head, 18);
+	add_dnodeint(&head, 17);
 	add_dnodeint(&head, 13);
+	add_dnodeint(&head, 11);
+	add_dnodeint(&head, 4);
+	add_dnodeint(&head, 1);
+	add_dnodeint(&head, 15);
+	add_dnodeint(&head, 12);
 	add_dnodeint(&head, 16);
-	//add_dnodeint(&head, 17);
-	//add_dnodeint(&head, 18);
-	//add_dnodeint(&head, 19);
+	add_dnodeint(&head, 2);
+	add_dnodeint(&head, 19);
+	add_dnodeint(&head, 11);
+	add_dnodeint(&head, 9);
+	add_dnodeint(&head, 1);
+	add_dnodeint(&head, 3);
+	add_dnodeint(&head, 20);
 	print_list(head);
 	print_list_reverse(head);
 
-	new_head = insertion_sort_list(head);
+	new_head = insertion_sort_list(&head);
 	print_list(new_head);
 	print_list_reverse(new_head);
 	return (0);
