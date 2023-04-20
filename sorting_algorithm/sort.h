@@ -27,6 +27,16 @@ typedef struct listint_s
 int *insertion_sort_array(int *array, int size);
 
 /**
+ * selection_sort_array - Repeatedly selecting the smallest element from
+ * unsorted portion to sorted portion of the list
+ *
+ * @array: The unsorted array
+ * @size: The size of the array
+ * Return: pointer to sorted array
+ */
+int *selection_sort_array(int *array, int size);
+
+/**
  * insertion_sort_list - Sorts a doubly linked list of integers in ascending
  * order using the insertion sort algorithm
  * @list: A pointer to a pointer to the first node of the list

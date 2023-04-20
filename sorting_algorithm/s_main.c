@@ -10,19 +10,19 @@ int main()
 	int *array;
 
 	printf("Insertion Sorting of Arrays\n");
-	array = insertion_sort_array(arr, size);
+	array = selection_sort_array(arr, size);
 	print_array(array, size);
 	printf("\n");
 
 	int arr_1[] = {4, 12, 7, 3, 20, 10, 18, 6, 1, 15};
-	array = insertion_sort_array(arr_1, size);
+	array = selection_sort_array(arr_1, size);
 	print_array(array, size);
 	printf("\n");
 
 	int arr_2[] = {4, 12, 7, 3, 20, 10, 18, 6, 1, 15,
 	15, 12, 8, 6, 11, 13, 17, 9, 19, 1};
 	size = 20;
-	array = insertion_sort_array(arr_2, size);
+	array = selection_sort_array(arr_2, size);
 	print_array(array, size);
 	printf("\n");
 
@@ -36,10 +36,10 @@ int main()
 		       149,7, 176, 167, 120, 124, 9, 158, 152, 153, 132,
 		       192, 53, 71};
 	size = 100;
-	array = insertion_sort_array(arr_3, size);
+	array = selection_sort_array(arr_3, size);
 	print_array(array, size);
 
-
+/**
 
 	printf("\n\nInsertion sort for Linked list\n");
 	head = NULL;
@@ -66,6 +66,6 @@ int main()
 	print_list(new_head);
 	print_list_reverse(new_head);
 
-	
+*/
 	return (0);
 }
