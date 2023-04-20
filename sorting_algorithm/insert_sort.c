@@ -19,7 +19,6 @@ int *insertion_sort_array(int *array, int size)
 		{
 			if (array[i] < array[i-j])
 			{
-				//swap element
 				temp = array[i-j];
 				array[i-j] = array[i];
 				array[i] = temp;
@@ -48,20 +47,31 @@ listint_t *insertion_sort_list(listint_t *list)
 		prev_ptr = ptr->prev;
 		temp = ptr->prev;
 		curr_ptr = ptr;
-		while(temp != NULL)
-		{
-			if (curr_ptr->n < prev_ptr->n)
-			{
-				curr_ptr->prev = prev_ptr->prev;
-				prev_ptr->prev = curr_ptr;
-				prev_ptr->next = curr_ptr->next;
-				(curr_ptr->next)->prev = prev_ptr;
-				curr_ptr->next = prev_ptr;
-			}
-			temp = temp->prev;
-		}
+		if (prev_ptr == NULL)
+			continue;
+		if (curr_ptr->n < prev_ptr->n)
+			swap_nodes(prev_ptr, curr_ptr);
+
 		ptr = ptr->next;
 	}
 
 	return (list);
+}
+
+void swap_nodes(listint_t *node_1, listint_t *node_2)
+{
+	listint_t *temp;
+
+	if (node_1->prev != NULL)
+		node_1->prev->next = node_2;
+
+	if (node_2->next != NULL)
+		node_2->next->prev = node_1;
+
+	temp = node_1->prev;
+	node_1->prev = node_2;
+	node_2->prev = temp;
+	temp = node_1->next;
+	node_1->next = node_2->next;
+	node_2->next = temp;
 }

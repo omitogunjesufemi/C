@@ -12,7 +12,7 @@
  */
 typedef struct listint_s
 {
-    const int n;
+    int n;
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
@@ -41,6 +41,7 @@ listint_t *insertion_sort_list(listint_t *list);
  * Return: the address of the new element, or NULL if it failed
  */
 listint_t *add_dnodeint(listint_t **head, const int n);
+void swap_nodes(listint_t *node_1, listint_t *node_2);
 
 /**
  * free_listint - Frees a listint_t list
@@ -62,6 +63,13 @@ void print_list(const listint_t *list);
  * @size: Number of elements in @array
  */
 void print_array(const int *array, size_t size);
+
+/**
+ * print_list_reverse - Prints all the elements of a dlistint_t in reverse
+ * @h: The linked list
+ * Return: the number of nodes
+ */
+size_t print_list_reverse(listint_t *h);
 
 
 #endif
